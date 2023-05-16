@@ -20,7 +20,7 @@ public class Ejemplo : MonoBehaviour
     {
         if(Input.GetButton("Horizontal"))
         {
-            gameObject.transform.Translate(speed * Time.deltaTime, 0, 0);
+            gameObject.transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, 0);
         }
 
         if (Input.GetButtonDown("Jump"))
