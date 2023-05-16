@@ -35,7 +35,15 @@ public class Ejemplo : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
+            bullet.transform.position = gameObject.transform.position + new Vector3(1, 0, 0);
+            bullet.transform.rotation = new Quaternion(0, 0, 90,90);
             Instantiate(bullet);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            var rb = bullet.GetComponent<Rigidbody2D>();
+            rb.gravityScale *= -1;
         }
     }
 
