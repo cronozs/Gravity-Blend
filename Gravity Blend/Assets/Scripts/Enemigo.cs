@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Enemigo : MonoBehaviour
 {
-    [SerializeField] private float speed;
-
-    public float damage;
+    [SerializeField] private Bullet bala;
+    [SerializeField]private float hp = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,16 +15,17 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.Translate(0, -speed * Time.deltaTime, 0);
+        if (hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
-    }
-
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
+        if(collision.tag == "Bullet")
+        {
+            hp -= bala.damage;
+        }
     }
 }
