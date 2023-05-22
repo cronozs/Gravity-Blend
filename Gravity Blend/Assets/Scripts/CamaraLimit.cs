@@ -28,7 +28,7 @@ public class CamaraLimit : MonoBehaviour
                      offsetZ
                 );
 
-            this.transform.position = Vector3.SmoothDamp(this.transform.position, targetPosition, ref vel, 0.3f);
+            this.transform.position = Vector3.SmoothDamp(this.transform.position, targetPosition, ref vel, 0.25f);
 
         }
 
