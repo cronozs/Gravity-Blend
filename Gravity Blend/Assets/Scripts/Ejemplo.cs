@@ -28,6 +28,8 @@ public class Ejemplo : MonoBehaviour
         if(Input.GetButton("Horizontal"))
         {
             gameObject.transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, 0);
+            if (Input.GetAxis("Horizontal") < 0) _sp.flipX = true;
+            else _sp.flipX = false;
         }
 
         if (Input.GetButtonDown("Jump") && canChangeGravity)
@@ -39,8 +41,16 @@ public class Ejemplo : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            bullet.transform.position = gameObject.transform.position + new Vector3(1, 0, 0);
-            bullet.transform.rotation = new Quaternion(0, 0, 90,90);
+            if (_sp.flipX)
+            {
+                bullet.transform.position = gameObject.transform.position + new Vector3(-1, 0, 0);
+                bullet.transform.rotation = new Quaternion(0, 0, -90, 90);
+            }
+            else
+            {
+                bullet.transform.position = gameObject.transform.position + new Vector3(1, 0, 0);
+                bullet.transform.rotation = new Quaternion(0, 0, 90, 90);
+            }
             Instantiate(bullet);
         }
 
