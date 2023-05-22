@@ -19,6 +19,7 @@ public class Ejemplo : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _sp = GetComponent<SpriteRenderer>();
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -66,13 +67,20 @@ public class Ejemplo : MonoBehaviour
             Verify();
             StartCoroutine(Delay());
         }
+
+        if (collision.tag == "Kill")
+        {
+            loose.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
     void Verify()
     {
-        if(hp <= 0)
+        if (hp <= 0)
         {
             loose.gameObject.SetActive(true);
+            Time.timeScale = 0f;
         }
     }
 
