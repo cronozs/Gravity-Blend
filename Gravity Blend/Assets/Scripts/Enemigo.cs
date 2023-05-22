@@ -7,13 +7,7 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private Bullet bala;
     [SerializeField] private float hp = 3;
     public float damage;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (hp <= 0)
