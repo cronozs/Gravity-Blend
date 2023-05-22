@@ -5,7 +5,8 @@ using UnityEngine;
 public class Enemigo : MonoBehaviour
 {
     [SerializeField] private Bullet bala;
-    [SerializeField]private float hp = 3;
+    [SerializeField] private float hp = 3;
+    public float damage;
     // Start is called before the first frame update
     void Start()
     {

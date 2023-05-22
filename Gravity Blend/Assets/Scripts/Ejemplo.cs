@@ -6,9 +6,12 @@ public class Ejemplo : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
     [SerializeField] private float speed;
+    [SerializeField] private Canvas loose;
     private Rigidbody2D _rb;
     private SpriteRenderer _sp;
+    private bool _canDamage = true;
     private bool canChangeGravity = true;
+    public float hp;
 
 
     // Start is called before the first frame update
@@ -53,5 +56,29 @@ public class Ejemplo : MonoBehaviour
         {
             canChangeGravity = true;
         }
+
+        if(collision.tag == "Enemy" && _canDamage)
+        {
+            Enemigo damage;
+            damage = collision.GetComponent<Enemigo>();
+            hp -= damage.damage;
+            _canDamage = false;
+            Verify();
+            StartCoroutine(Delay());
+        }
+    }
+
+    void Verify()
+    {
+        if(hp <= 0)
+        {
+            loose.gameObject.SetActive(true);
+        }
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        _canDamage = true;
     }
 }
