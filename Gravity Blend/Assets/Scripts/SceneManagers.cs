@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagers : MonoBehaviour
 {
+    private string  _currenteScene;
+    private void Start()
+    {
+        _currenteScene = SceneManager.GetActiveScene().name;
+    }
     public void Recargar()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(_currenteScene);
     }
 }
