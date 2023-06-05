@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Kill
   - NexLevel
+  - End
   layers:
   - Default
   - TransparentFX

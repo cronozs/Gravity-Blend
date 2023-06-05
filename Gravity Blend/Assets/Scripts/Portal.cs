@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
+    [SerializeField] private Canvas end;
     private int _scene;
 
     private void Start()
@@ -17,6 +18,10 @@ public class Portal : MonoBehaviour
         {
             _scene += 1;
             SceneManager.LoadScene(_scene);
+        }
+        if (collision.tag == "Player" && gameObject.tag == "End")
+        {
+            end.gameObject.SetActive(true);
         }
     }
 }
