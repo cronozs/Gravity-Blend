@@ -1100,9 +1100,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1451301820514309724, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_fontSize
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451301820514309724, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451301820514309725, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 791.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451301820514309725, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 114.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451301820514309725, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451301820615034408, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451301820615034408, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451301820615034408, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1451301820615034410, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
       propertyPath: m_Name
       value: Loose
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451301820615034410, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1451301820615034414, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
       propertyPath: m_Pivot.x
@@ -1187,6 +1223,14 @@ PrefabInstance:
     - target: {fileID: 1451301820615034414, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451301821347019521, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451301821347019521, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99c3e387411f8724cb56895a44b174b9, type: 3}
