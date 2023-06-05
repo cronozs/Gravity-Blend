@@ -9,6 +9,7 @@ public class Ejemplo : MonoBehaviour
     [SerializeField] private Canvas loose;
     private Rigidbody2D _rb;
     private SpriteRenderer _sp;
+    private SpriteRenderer _bsr;
     private bool _canDamage = true;
     private bool canChangeGravity = true;
     public float hp;
@@ -19,6 +20,7 @@ public class Ejemplo : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         _sp = GetComponent<SpriteRenderer>();
+        _bsr = bullet.GetComponent<SpriteRenderer>();
         Time.timeScale = 1f;
     }
 
@@ -44,12 +46,16 @@ public class Ejemplo : MonoBehaviour
             if (_sp.flipX)
             {
                 bullet.transform.position = gameObject.transform.position + new Vector3(-1, 0, 0);
-                bullet.transform.rotation = new Quaternion(0, 0, -90, 90);
+                bullet.transform.rotation = new Quaternion(0, 0, 90, 0);
+                _bsr.flipX = true;
+                _bsr.flipY = true;
             }
             else
             {
                 bullet.transform.position = gameObject.transform.position + new Vector3(1, 0, 0);
-                bullet.transform.rotation = new Quaternion(0, 0, 90, 90);
+                bullet.transform.rotation = new Quaternion(0, 0, 0 , 90);
+                _bsr.flipX = false;
+                _bsr.flipY = false;
             }
             Instantiate(bullet);
         }
