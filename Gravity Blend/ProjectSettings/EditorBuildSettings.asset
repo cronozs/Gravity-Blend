@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Prueva2.unity
     guid: 54ff30faac0ef894dabc7fa03df096b1
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 314f150fae7e4834eac3f06d9f563e59
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 1c72900a46b70bd4abc24c65fee8db22
   - enabled: 1

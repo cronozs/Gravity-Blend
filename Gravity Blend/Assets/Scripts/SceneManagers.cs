@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagers : MonoBehaviour
 {
+    public int scenee;
     private string  _currenteScene;
     private void Start()
     {
@@ -13,5 +14,10 @@ public class SceneManagers : MonoBehaviour
     public void Recargar()
     {
         SceneManager.LoadScene(_currenteScene);
+    }
+
+    public void Change()
+    {
+        SceneManager.LoadScene(scenee);
     }
 }
